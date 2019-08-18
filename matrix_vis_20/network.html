@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/nice.js"></script>
+  </head>
+  <body style = "margin:0px; padding:0px; background-color:rgb(40,44,47);">
+  <div id = "container" style = "width:2560px; height:1600px;"></div>
+    <script>
+    
+    var graph = nice.graph('container');
+
+    nice.load('js/data.js', function(){
+      graph.data(graph_data.nodes);
+      graph.bidirectional_links_only = false;
+      graph.include_unconnected_nodes = true;
+      graph.init();
+    });
+
+  </script>
+  </body>
+</html>
